@@ -15,4 +15,4 @@ phases:
       - pip --version
   build:
     commands:
-      - serverless deploy
+      - serverless deploy --region $AWS_REGION
