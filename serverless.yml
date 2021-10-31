@@ -15,13 +15,13 @@ provider:
 
 functions:
   createLoyaltyCard:
-    handler: handler.create_loyalty_card
+    handler: app/handler.create_loyalty_card
     events:
       - http:
           path: /loyalty-cards
           method: post
   getAllLoyaltyCards:
-    handler: handler.get_all_loyalty_card
+    handler: app/handler.get_all_loyalty_card
     events:
       - http:
           path: /loyalty-cards
@@ -29,6 +29,13 @@ functions:
     deploymentSettings:
       type: Canary10Percent5Minutes
       alias: Live
+      preTrafficHook: preHook
+      postTrafficHook: postHook
+
+  preHook:
+    handler: app/hooks.pre
+  postHook:
+    handler: app/hooks.post
 
 package:
   exclude:

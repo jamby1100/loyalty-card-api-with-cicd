@@ -3,7 +3,7 @@ import string
 import random
 import os
 
-from dynamodb_gateway import DynamodbGateway
+from app.dynamodb_gateway import DynamodbGateway
 
 def create_loyalty_card(event, context):
     body = json.loads(event["body"])
