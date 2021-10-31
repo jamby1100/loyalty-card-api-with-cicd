@@ -6,6 +6,7 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
+      - ls -a ~
       - npm install
       - npm install -g serverless
       - curl -O https://bootstrap.pypa.io/get-pip.py

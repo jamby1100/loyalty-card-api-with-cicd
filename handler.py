@@ -36,7 +36,7 @@ def get_all_loyalty_card(event, context):
     body = {
         "message": "I'm getting all loyalty cards",
         "input": event,
-        "thanks": "a lot for the service"
+        "thanks": "READY FOR THE RACE"
     }
 
     table_name = os.getenv("DYNAMODB_CARDS_TABLE_NAME")
